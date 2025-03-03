@@ -1,0 +1,16 @@
+.App{
+    font-family: 'Herva', serif;
+    background-color: #1D503A;
+    font-size: 5rem;
+    color: #FAF6EF;
+    height: 100vh;
+    /* padding: 5%; */
+    position: relative;
+}
+
+.count-up-text{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+}
+

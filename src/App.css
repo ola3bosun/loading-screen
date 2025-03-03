@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -35,4 +40,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.location{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2001;
+  color: red;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+
+}
+
+.blinker{
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: red;
+  position: relative;
+  animation: live infinite ease-in 1.5s ;
+}
+
+@keyframes live{
+  33% {background-color: red;}
+  67% {background-color: transparent;}
+  100%{background-color: red;}
 }
