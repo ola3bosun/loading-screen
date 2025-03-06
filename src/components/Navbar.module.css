@@ -1,0 +1,104 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  width: 100%;
+}
+
+/* NAVIGATION PANEL */
+.nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  padding-top: 50px;
+}
+
+/* NAV LINKS */
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  height: 100%;
+}
+
+.link {
+  color: #FAF6EF;
+  text-decoration: none;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.link:hover {
+  color: #f5f5f5;
+}
+
+/* Divider Line */
+.divider {
+  width: 60%;
+  border-top: 1px solid #FAF6EF;
+  background: #FAF6EF;
+  margin: 5px 0;
+}
+
+/* HAMBURGER MENU BUTTON */
+.menuBtn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 30px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* HAMBURGER LINES */
+.line {
+  width: 30px;
+  height: 2px;
+  background: #FAF6EF;
+  mix-blend-mode: difference;
+  border-radius: 8px;
+  margin: 5px 0;
+  transition: all 700ms cubic-bezier(.9, 0, .33, 1);
+  z-index: 9999;
+}
+.line1{
+  width: 15px;
+  float: right;
+}
+.line3{
+  width: 15px;
+}
+/* ROTATION STATES FOR PERFECT 'X' */
+.open .line1 {
+  /* transform: rotate(45deg) translateY(7px); */
+  width: 30px;
+}
+
+.open .line2 {
+  opacity: 0; /* Hide middle line */
+}
+
+.open .line3 {
+  /* transform: rotate(-45deg) translateY(-7px); */
+  width: 30px;
+}
+
+/* NORMAL STATE */
+.line1, .line3 {
+  /* transform: rotate(0) translateY(0); */
+}
+
+.line2 {
+  opacity: 1;
+}
